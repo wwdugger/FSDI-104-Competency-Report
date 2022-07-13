@@ -1,0 +1,40 @@
+body {
+    background-color: antiquewhite;
+}
+
+h2{
+    font-weight: 800rem;
+    color:rgb(0, 17, 255);
+}
+
+h3{
+    text-align: center;
+    background-color: rgb(0, 17, 255);
+    color:white;
+}
+
+.nav-link {
+    color: rgb(0, 17, 255);
+    transition-duration: 0.5s;
+}
+
+.nav-link:hover {
+    
+    color: white;
+}
+
+body {
+    background-size: 100% 100%;
+}
+
+body {
+    min-height: 100vh;
+    background-image: white;
+    color:rgb(0, 0, 0);
+}
+
+#services{
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(0, 17, 255);
+}

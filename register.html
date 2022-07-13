@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="register.css">
+    <title>The Fashion Pet</title>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div class="container mx-auto p-0">
+        <div class="row d-flex align-items-center">
+            <div class="col text-center">
+                <h1 class="display-3 mt-4">The Fashion Pet</h1>
+           
+        <hr>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">Admin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./register.html">Register</a>
+                </li>
+            </ul>
+        <hr>
+        <main class="d-flex row">
+            <div class="col-3 reg-form">
+                <h2 class="mb-3 display-6 text-center">Register Pet</h2>
+
+                <div class="form-container border rounded border-p-3">
+                    <form class="" action="#">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Pet Name:</label>
+                            <input type="text" class="form-control" name="name" id="petName">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="age" class="form-label">Pet Age:</label>
+                            <input type="number" class="form-control" name="age" id="petAge">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="gender" class="form-label">Pet Gender:</label>
+                            <select class="form-select" name="petGender" id="petGender">
+                                <option value="" disabled selected>--- Select gender ---</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                </select>
+                        </div>
+                                
+                        <div class="mb-3">
+                            <label for="breed" class="form-label">Pet Breed:</label>
+                            <input type="text" class="form-control" name="breed" id="petBreed">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="type" class="form-label">Type:</label>
+                            <select class="form-select" name="type" id="petType">
+                                <option value="" disabled selected>--- Select type ---</option>
+                                <option value="Dog">Dog</option>
+                                <option value="Cat">Cat</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="service" class="form-label">Service:</label>
+                            <select class="form-select" name="service" id="petService">
+                                <option value="" disabled selected>--- Select service ---</option>
+                                <option value="Groom">Groom</option>
+                                <option value="Wash and Dry">Wash and Dry</option>
+                                <option value="Nai Trim">Nail Trim</option>
+                                <option value="Teeth Cleaning">Teeth Cleaning</option>
+                                <option value="Obedience Training">Obedience Training</option>
+                                <option value="Walking">Walking</option>
+                                <option value="Full Service">Full Service</option>
+                            </select>
+                        </div>  
+
+                        <div class="mb-3">
+                            <label for="owner" class="form-label">Owner's Name:</label>
+                            <input type="text" class="form-control" name="owner" id="petOwner">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Owner's Phone:</label>
+                            <input type="tel" class="form-control" name="phone" id="petPhone">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Owner's Email:</label>
+                            <input type="email" class="form-control" name="email" id="petEmail">
+                        </div>
+                    </form>
+                    <div class="">
+                        <button type="submit" class="d-flex btn btn-lg btn-mt-5 mb-2 ms-auto" onclick="register()">Register Pet</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-9 pet-info">
+                <h2 class="mb-3 display-6 text-center">Pet Information</h2>
+                <div class="border-bottom border-mx-3"></div>
+
+                <div class="row mt-4">
+                    <div id="number-pets" class="col-3"></div>
+
+                    <div id="total-price" class="col-3"></div>
+                </div>
+
+                <div class="count-list mb-3">
+                    <div class="count" onclick="searchByType('Dog')">
+                        <i class="animal-icon fas fa-dog"></i>
+                        <label id="dog-count"></label>
+                    </div>
+
+                    <div class="count" onclick="searchByType('Cat')">
+                        <i class="animal-icon fas fa-cat"></i>
+                        <label id="cat-count"></label>
+                    </div>
+
+                <div class="search d-flex mb-3">
+                    <input id="search-text" class="form-control w-50 mx-3" type="search" placeholder="search by dog name, owner name, or phone">
+                    <button onclick="searchPet()" class="btn btn-sm btn-primary mx-2">Search</button>
+                    <button onclick="displayPets()" class="btn btn-sm btn-primary">Show All</button>
+                </div>
+
+                <div class="border-bottom border-mx-3"></div>
+                <div id="pets" class="d-flex flex-wrap justify-content-between mb-5"></div>
+            </div>
+            <div class="border-bottom border-mx-3"></div>
+        </main>
+
+        <div class="footer">
+        <footer id="footer-info">
+            
+        </footer>
+    </div>
+
+    <div class="copyright">
+        <p>All copyrights reserved Wesley Dugger &copy; 2022</p>
+
+    </div>
+
+    <script src="scripts/register.js"></script>
+    <script src="https://kit.fontawesome.com/d905d0cbda.js" crossorigin="anonymous"></script>
+</body>
+</html>

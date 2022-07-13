@@ -1,0 +1,57 @@
+body {
+  background-color: aquamarine;
+}
+
+h1{
+    background-color: rgb(0, 0, 0);
+    color:white
+}
+
+h2{
+    font-weight: 800rem;
+    color:rgb(42, 146, 38);
+}
+
+h3{
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color:white;
+}
+
+
+
+.nav-link {
+    color: rgb(60, 163, 110);
+    transition-duration: 0.5s;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+body {
+    background-size: 100% 100%;
+}
+
+body {
+    min-height: 100vh;
+    color:rgb(0, 17, 255);
+}
+
+p{
+    font-size: 2rem;
+    font-weight: 8rem;
+
+}
+
+footer{
+    font-size: 0rem;
+    text-align: center;
+    color: rgb(0, 17, 255);
+}
+
+.copyright{
+    font-size: .5rem;
+    text-align: center;
+    color: rgb(150, 144, 144);
+}
